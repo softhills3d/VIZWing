@@ -1,0 +1,8 @@
+v15
+.vs/
+bin/
+obj/
+Thumbs.db
+*.user
+packages/
+VIZCore3D.NET.dll
