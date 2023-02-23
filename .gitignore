@@ -7,9 +7,9 @@ Thumbs.db
 
 # VIZCore
 *.aar
-VIZWingBasic/gradle/
+VIZWingBasic/.gradle/
 VIZWingBasic/build/
-VIZWingBasic/idea/
+VIZWingBasic/.idea/
 VIZWingBasic/local.properties
 VIZWingBasic/app/build/
 
