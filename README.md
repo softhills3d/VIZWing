@@ -9,7 +9,7 @@ SOFTHILLS Mobile 3D Visualization
 ## 디렉토리 설명
 | 구분  | 설명 | 비고 |
 | ------------- | ------------- | ------------- |
-| VIZWingBasic | 모델 뷰어 기본 화면 | 기본 뷰어 화면 |
+| VIZWingBasic | 모델 뷰어 기능 | 기본 화면 |
 ***
 
 ## Gallery
