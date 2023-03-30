@@ -81,10 +81,17 @@ public class LocalViewActivity extends AppCompatActivity implements VIZCore.VIZC
     }
 
     public void OnMenuARStart(View v) {
+        //시작 위치
         Vector3D start = new Vector3D(23867, -23, 2800);
-        Vector3D view = new Vector3D(18224, -45, 2800);
         vizwing.AR.ARStartPos = start;
+
+        //보는 위치
+        Vector3D view = new Vector3D(18224, -45, 2800);
         vizwing.AR.ARViewPos = view;
+
+        //AR Open Type
+        // 0 = 아바타 모드 : 등록된 marker의 2점으로 사용자 위치 정렬
+        // 1 = Marker 위에 개체 생성하기
         vizwing.AR.ARCoreProcessType = 0;
         vizwing.AR.start();
     }
