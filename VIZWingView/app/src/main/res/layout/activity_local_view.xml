@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocalViewActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_view">
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frame_view_menu"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="visible">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewISOPlus"
+                        android:text="@string/view_menu_view_iso_plus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewISOMinus"
+                        android:text="@string/view_menu_view_iso_minus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewXPlus"
+                        android:text="@string/view_menu_view_x_plus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewXMinus"
+                        android:text="@string/view_menu_view_x_minus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewYPlus"
+                        android:text="@string/view_menu_view_y_plus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewYMinus"
+                        android:text="@string/view_menu_view_y_minus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewZPlus"
+                        android:text="@string/view_menu_view_z_plus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnMenuViewZMinus"
+                        android:text="@string/view_menu_view_z_minus" />
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

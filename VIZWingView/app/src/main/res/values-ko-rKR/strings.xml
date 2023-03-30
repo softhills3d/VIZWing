@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VIZWingView</string>
+
+    <string name="view_menu_view_iso_plus">ISO+</string>
+    <string name="view_menu_view_iso_minus">ISO-</string>
+    <string name="view_menu_view_x_plus">X+</string>
+    <string name="view_menu_view_x_minus">X-</string>
+    <string name="view_menu_view_y_plus">Y+</string>
+    <string name="view_menu_view_y_minus">Y-</string>
+    <string name="view_menu_view_z_plus">Z+</string>
+    <string name="view_menu_view_z_minus">Z-</string>
+</resources>
