@@ -65,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         vizcore = new VIZCore(this);
-        //vizcore.License.licenseCode("F3A023EB-4A17-4174-8D07-0CDB2CAB2622");
-        vizcore.License.licenseTerm();
+        vizcore.License.licenseCode("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
 
 
         listView = (ListView) findViewById(R.id.lv_viz);
@@ -83,14 +82,19 @@ public class MainActivity extends AppCompatActivity {
                 // 클릭된 항목의 Viz 객체 가져오기
                 Viz item = listVizFile.get(position);
 
-                Intent intent = new Intent(getBaseContext(), LocalViewActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                intent.putExtra("@id/viz_name", item.FileName); //파일 이름
-                intent.putExtra("@id/viz_path", item.FilePath); //파일 경로
-                intent.putExtra("@id/viz_fullpath", item.FileFullPath); //파일 경로
-                startActivity(intent);
+                if(vizcore.License.isAuthentication()){
+                    Intent intent = new Intent(getBaseContext(), LocalViewActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    intent.putExtra("@id/viz_name", item.FileName); //파일 이름
+                    intent.putExtra("@id/viz_path", item.FilePath); //파일 경로
+                    intent.putExtra("@id/viz_fullpath", item.FileFullPath); //파일 경로
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(),"라이선스 인증에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

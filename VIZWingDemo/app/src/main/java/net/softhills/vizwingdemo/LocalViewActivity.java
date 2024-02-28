@@ -10,6 +10,10 @@ import net.softhills.vizcore.VIZCore;
 
 public class LocalViewActivity extends AppCompatActivity implements VIZCore.VIZCoreCallback{
     VIZCore vizcore;
+    String fileName;
+    String filePath;
+    String fileFullPath;
+    FrameLayout frameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,16 @@ public class LocalViewActivity extends AppCompatActivity implements VIZCore.VIZC
         setContentView(R.layout.activity_local_view);
 
         vizcore = MainActivity.vizcore;
+
+        filePath = getIntent().getExtras().getString("@id/viz_path");
+        fileName = getIntent().getExtras().getString("@id/viz_name");
+        fileFullPath = getIntent().getExtras().getString("@id/viz_fullpath");
+
+        frameView = findViewById(R.id.frame_view);
+
+        vizcore.setFrameLayout(frameView); //viewer화면
+        vizcore.Model.open(fileFullPath); //모델 열기
+        vizcore.ModelTree.setModeltreeDrawerMode(true); //모델 트리 설정
     }
 
     @Override
